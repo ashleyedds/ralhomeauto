@@ -71,32 +71,40 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  overflow: visible;
 }
 
 nav {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: fit-content;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
   gap: 1rem;
+  line-height: 0;
 }
 
 .logo-container img {
-  height: 80px;
+  height: 155px;
   width: auto;
   max-width: 100%;
+  display: block;
 }
 
 @media (max-width: 768px) {
+  nav {
+    padding: 0.5rem 1rem;
+  }
+  
   .logo-container img {
-    height: 60px;
+    height: 150px;
   }
 }
 
@@ -109,6 +117,7 @@ nav {
 .nav-links a {
   color: var(--primary-gray);
   font-weight: 500;
+  font-size: 20px;
   padding: 0.5rem 0;
   border-bottom: 2px solid transparent;
   transition: border-color 0.3s ease;
@@ -231,10 +240,21 @@ nav {
   margin-bottom: 1.5rem;
 }
 
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
 .service-icon {
   font-size: 3rem;
-  margin-bottom: 1rem;
   color: var(--accent-orange);
+  flex-shrink: 0;
+}
+
+.service-header h2 {
+  margin-bottom: 0;
 }
 
 /* Features Section */
